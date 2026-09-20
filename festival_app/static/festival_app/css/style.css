@@ -1,0 +1,1218 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #f8f3ed;
+    color: #40352f;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+
+
+/* ==============================
+   HEADER
+================================= */
+
+.header {
+    width: 100%;
+    height: 82px;
+    background: #f8f3ed;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    border-bottom: 1px solid #e5d8ca;
+
+    /* O cabeçalho não fica preso na tela */
+    position: relative;
+    z-index: 100;
+}
+
+
+/* LOGO + NOME */
+
+.logo-nome {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* IMAGEM DO LOGO */
+
+.logo-nome img {
+    width: 40px !important;
+    height: 40px !important;
+
+    max-width: 40px !important;
+    max-height: 40px !important;
+
+    object-fit: contain;
+    display: block;
+}
+
+
+/* NOME DA ALDEIA */
+
+.logo-nome h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    color: #65452f;
+    margin: 0;
+}
+
+
+/* MENU */
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #65452f;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #b17e42;
+}
+
+
+/* ==============================
+   HERO
+================================= */
+
+.hero {
+    min-height: 500px;
+
+    background:
+        linear-gradient(
+            rgba(63, 45, 34, 0.72),
+            rgba(63, 45, 34, 0.72)
+        ),
+         url("../img/banner-festival.png") no-repeat;
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.hero-conteudo {
+    max-width: 760px;
+    color: white;
+}
+
+.tag {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border: 1px solid #e3c18d;
+    border-radius: 30px;
+
+    color: #f0d5a9;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 6vw, 70px);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 650px;
+
+    margin: auto;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #f2e9df;
+
+    margin-bottom: 35px;
+}
+
+
+/* BOTÃO */
+
+.botao {
+    display: inline-block;
+
+    background: #c99b5b;
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: #b27e42;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   SEÇÕES
+================================= */
+
+.evento {
+    padding: 90px 8%;
+}
+
+.titulo-secao {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+}
+
+.titulo-secao span {
+    color: #9b7045;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.titulo-secao h2 {
+    font-family: "Playfair Display", serif;
+
+    color: #4b3528;
+
+    font-size: 42px;
+
+    margin: 10px 0 15px;
+}
+
+.titulo-secao p {
+    color: #776a62;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/* ==============================
+   INFORMAÇÕES
+================================= */
+
+.informacoes {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.info-card {
+    background: white;
+
+    border: 1px solid #eadfd3;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(70, 48, 34, 0.05);
+}
+
+.icone {
+    width: 48px;
+    height: 48px;
+
+    background: #eee1d1;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+.info-card h3 {
+    color: #65452f;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.info-card p {
+    color: #756961;
+
+    font-size: 13px;
+}
+
+
+/* ==============================
+   SEÇÃO ALMOÇO
+================================= */
+
+.almoco {
+    background: #52634b;
+
+    color: white;
+
+    padding: 80px 10%;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.almoco-texto > span {
+    color: #e5c98d;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.almoco-texto h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    margin: 15px 0 20px;
+}
+
+.almoco-texto > p {
+    max-width: 650px;
+
+    color: #edf0e8;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+.aviso {
+    margin-top: 25px;
+
+    padding: 18px 20px;
+
+    background: rgba(0, 0, 0, 0.12);
+
+    border-left: 4px solid #d5ae6e;
+
+    border-radius: 5px;
+}
+
+.aviso strong {
+    color: #e5c98d;
+
+    font-size: 14px;
+}
+
+.aviso p {
+    margin-top: 6px;
+
+    color: #e9eee5;
+
+    font-size: 13px;
+}
+
+.almoco-destaque {
+    background: #f8f3ed;
+
+    color: #65452f;
+
+    padding: 45px 30px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.folha {
+    font-size: 35px;
+
+    color: #9c7448;
+
+    margin-bottom: 10px;
+}
+
+.almoco-destaque h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+.almoco-destaque strong {
+    display: block;
+
+    color: #52634b;
+
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+.almoco-destaque p {
+    color: #8a7a6d;
+
+    font-size: 13px;
+}
+
+
+/* ==============================
+   INSCRIÇÃO
+================================= */
+
+.inscricao {
+    padding: 90px 20px;
+
+    background: #f8f3ed;
+}
+
+.formulario {
+    max-width: 900px;
+
+    margin: auto;
+
+    background: white;
+
+    border: 1px solid #e7dbce;
+
+    border-radius: 15px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 15px 45px rgba(70, 48, 34, 0.07);
+}
+
+.form-secao {
+    padding-bottom: 35px;
+
+    margin-bottom: 35px;
+
+    border-bottom: 1px solid #eee4da;
+}
+
+.form-secao h3 {
+    color: #65452f;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    margin-bottom: 5px;
+}
+
+.descricao {
+    color: #8a7b71;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+.linha {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+.campo-grande {
+    grid-column: span 1;
+}
+
+.campo label {
+    color: #58463a;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+
+    border: 1px solid #dcd0c4;
+
+    background: #fffdfb;
+
+    border-radius: 7px;
+
+    padding: 13px 15px;
+
+    outline: none;
+
+    font-size: 13px;
+
+    color: #493a31;
+
+    transition: 0.2s;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #9b7045;
+
+    box-shadow:
+        0 0 0 3px rgba(155, 112, 69, 0.10);
+}
+
+.campo textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+.opcoes {
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 5px;
+}
+
+.radio {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 13px;
+
+    color: #66564b;
+}
+
+.radio input {
+    accent-color: #52634b;
+}
+
+
+/* ==============================
+   CONFIRMAÇÃO
+================================= */
+
+.confirmacao {
+    margin-bottom: 25px;
+}
+
+.check {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    color: #66584f;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    cursor: pointer;
+}
+
+.check input {
+    margin-top: 4px;
+
+    accent-color: #52634b;
+}
+
+.botao-enviar {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 16px;
+
+    background: #65452f;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.botao-enviar:hover {
+    background: #4b3528;
+
+    transform: translateY(-2px);
+}
+
+.seguranca {
+    text-align: center;
+
+    color: #92857c;
+
+    font-size: 11px;
+
+    margin-top: 15px;
+}
+
+
+/* ==============================
+   FOOTER
+================================= */
+
+footer {
+    background: #3f2d22;
+
+    color: white;
+
+    padding: 50px 8% 25px;
+}
+
+.footer-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    max-width: 400px;
+}
+
+.footer-logo .logo-simbolo {
+    background: #c99b5b;
+}
+
+.footer-logo h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.footer-logo p {
+    color: #cfc1b6;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+.footer-links {
+    display: flex;
+
+    gap: 25px;
+
+    margin: 30px 0;
+}
+
+.footer-links a {
+    color: #ddcec1;
+
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: #e0b979;
+}
+
+.copyright {
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: #a99a8e;
+
+    font-size: 10px;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 800px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .informacoes {
+        grid-template-columns: 1fr;
+    }
+
+    .almoco {
+        grid-template-columns: 1fr;
+
+        padding: 60px 7%;
+
+        gap: 40px;
+    }
+
+    .almoco-texto h2 {
+        font-size: 36px;
+    }
+
+    .formulario {
+        padding: 30px 22px;
+    }
+
+    .linha {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+}
+
+
+/* ==============================
+   CELULAR
+================================= */
+
+@media (max-width: 500px) {
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 34px;
+    }
+
+    /* Nome da aldeia no celular */
+    .logo-nome h1 {
+        font-size: 17px;
+    }
+
+    /* Logo no celular */
+    .logo-nome img {
+        width: 35px !important;
+        height: 35px !important;
+
+        max-width: 35px !important;
+        max-height: 35px !important;
+    }
+
+    .evento {
+        padding: 65px 6%;
+    }
+
+    .inscricao {
+        padding: 65px 12px;
+    }
+}
+
+
+/* ==============================
+   PROGRAMAÇÃO
+================================= */
+
+.programacao {
+    padding: 90px 8%;
+
+    background: #f1e8de;
+}
+
+
+/* ==============================
+   DIA
+================================= */
+
+.dia-programacao {
+    max-width: 950px;
+
+    margin: 0 auto 60px;
+}
+
+.dia-cabecalho {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.dia-numero {
+    width: 75px;
+    height: 75px;
+
+    background: #65452f;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    flex-shrink: 0;
+}
+
+.dia-cabecalho span {
+    color: #9b7045;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.dia-cabecalho h3 {
+    font-family: "Playfair Display", serif;
+
+    color: #4b3528;
+
+    font-size: 30px;
+
+    margin: 3px 0;
+}
+
+.dia-cabecalho p {
+    color: #806f63;
+
+    font-size: 12px;
+}
+
+
+/* ==============================
+   LINHA DO CRONOGRAMA
+================================= */
+
+.cronograma {
+    position: relative;
+
+    padding-left: 40px;
+}
+
+.cronograma::before {
+    content: "";
+
+    position: absolute;
+
+    left: 11px;
+
+    top: 0;
+    bottom: 0;
+
+    width: 2px;
+
+    background: #d4c2b0;
+}
+
+
+/* ==============================
+   ATIVIDADE
+================================= */
+
+.atividade {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 80px 1fr;
+
+    gap: 25px;
+
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 18px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5d8ca;
+
+    box-shadow:
+        0 5px 20px rgba(70, 48, 34, 0.04);
+}
+
+.atividade::before {
+    content: "";
+
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    background: #c99b5b;
+
+    border: 3px solid #f1e8de;
+
+    border-radius: 50%;
+
+    left: -35px;
+
+    top: 29px;
+}
+
+.horario {
+    color: #9b7045;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    padding-top: 2px;
+}
+
+.atividade-conteudo h4 {
+    color: #65452f;
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 8px;
+}
+
+.atividade-conteudo strong {
+    display: block;
+
+    color: #514139;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 17px;
+
+    line-height: 1.4;
+
+    margin-bottom: 10px;
+}
+
+.atividade-conteudo p {
+    color: #766960;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 8px;
+}
+
+.atividade-conteudo ul,
+.atividade-conteudo ol {
+    color: #766960;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    padding-left: 20px;
+
+    margin-top: 8px;
+}
+
+
+/* ==============================
+   ESTAÇÕES
+================================= */
+
+.estacoes {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+.estacoes > div {
+    background: #f7f1eb;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    border-left: 3px solid #9b7045;
+}
+
+.estacoes b {
+    display: block;
+
+    color: #65452f;
+
+    font-size: 12px;
+
+    margin-bottom: 6px;
+}
+
+.estacoes p {
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+.estacoes small {
+    color: #8d796a;
+
+    font-size: 10px;
+}
+
+
+/* ==============================
+   ALMOÇO NA PROGRAMAÇÃO
+================================= */
+
+.destaque-almoco {
+    background: #52634b;
+
+    border: none;
+
+    color: white;
+}
+
+.destaque-almoco::before {
+    background: #e0b979;
+}
+
+.destaque-almoco .horario {
+    color: #e0c28c;
+}
+
+.destaque-almoco .atividade-conteudo h4 {
+    color: #e7c993;
+}
+
+.destaque-almoco .atividade-conteudo p {
+    color: #edf0e8;
+}
+
+
+/* ==============================
+   NOITE
+================================= */
+
+.noite {
+    background: #46352a;
+
+    border-color: #46352a;
+}
+
+.noite .horario {
+    color: #d7b47a;
+}
+
+.noite .atividade-conteudo h4 {
+    color: #d7b47a;
+}
+
+.noite .atividade-conteudo strong,
+.noite .atividade-conteudo p,
+.noite .atividade-conteudo small {
+    color: #eee4da;
+}
+
+
+/* ==============================
+   NOTA
+================================= */
+
+.nota {
+    background: #f4eadb;
+
+    border-left: 3px solid #c99b5b;
+
+    color: #715b4b;
+
+    font-size: 11px;
+
+    padding: 10px 12px;
+
+    margin: 15px 0;
+
+    border-radius: 5px;
+}
+
+
+/* ==============================
+   VILA DE SABERES
+================================= */
+
+.vila-saberes {
+    max-width: 950px;
+
+    margin: 80px auto 0;
+
+    padding: 40px;
+
+    background: #65452f;
+
+    color: white;
+
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+.vila-saberes > span {
+    color: #e2c18c;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.vila-saberes h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+
+    margin: 10px 0;
+}
+
+.vila-saberes > p {
+    color: #e7dcd2;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+.vila-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+.vila-grid div {
+    background: rgba(255, 255, 255, 0.08);
+
+    padding: 14px 10px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+
+    color: #eee3d8;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE DA PROGRAMAÇÃO
+================================= */
+
+@media (max-width: 700px) {
+
+    .programacao {
+        padding: 65px 5%;
+    }
+
+    .cronograma {
+        padding-left: 25px;
